@@ -1,5 +1,5 @@
-#ifndef __QUADROTOR_MSGS_COMM_TYPES_H__
-#define __QUADROTOR_MSGS_COMM_TYPES_H__
+#ifndef __CONTROL_MSGS_COMM_TYPES_H__
+#define __CONTROL_MSGS_COMM_TYPES_H__
 
 #define TYPE_SO3_CMD 's'
 struct SO3_CMD_INPUT

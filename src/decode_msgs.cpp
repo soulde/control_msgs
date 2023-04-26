@@ -1,12 +1,12 @@
-#include "quadrotor_msgs/decode_msgs.h"
-#include <quadrotor_msgs/comm_types.h>
+#include "control_msgs/decode_msgs.h"
+#include <control_msgs/comm_types.h>
 #include <Eigen/Geometry>
 
-namespace quadrotor_msgs
+namespace control_msgs
 {
 
 bool decodeOutputData(const std::vector<uint8_t> &data,
-                      quadrotor_msgs::OutputData &output)
+                      control_msgs::OutputData &output)
 {
   struct OUTPUT_DATA output_data;
   if(data.size() != sizeof(output_data))
@@ -56,7 +56,7 @@ bool decodeOutputData(const std::vector<uint8_t> &data,
 }
 
 bool decodeStatusData(const std::vector<uint8_t> &data,
-                      quadrotor_msgs::StatusData &status)
+                      control_msgs::StatusData &status)
 {
   struct STATUS_DATA status_data;
   if(data.size() != sizeof(status_data))
@@ -71,7 +71,7 @@ bool decodeStatusData(const std::vector<uint8_t> &data,
 }
 
 bool decodePPROutputData(const std::vector<uint8_t> &data,
-                         quadrotor_msgs::PPROutputData &output)
+                         control_msgs::PPROutputData &output)
 {
   struct PPR_OUTPUT_DATA output_data;
   if(data.size() != sizeof(output_data))
